@@ -20,6 +20,8 @@ export const SEED_SETTINGS: SiteSettings = {
 const doctorImg = (seed: number) =>
   `https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80&sig=${seed}`
 
+
+console.log(doctorImg)
 export const SEED_DOCTORS: Doctor[] = [
   {
     id: 'aziz-karimov',
@@ -30,7 +32,7 @@ export const SEED_DOCTORS: Doctor[] = [
     rating: 4.9,
     reviewsCount: 240,
     badge: 'Top mutaxassis',
-    imageUrl: './public/Aziz.png', // doctorImg(1),
+    imageUrl: doctorImg(1), // ,
     bio: "Yurak-qon tomir kasalliklarini tashxislash va davolash bo‘yicha yuqori malakali mutaxassis. Innovatsion yondashuv, klinik protokollar va xalqaro standartlar asosida ishlaydi.",
     certificates: [
       { title: 'ESC Certification', subtitle: 'European Society of Cardiology, 2018' },
@@ -59,7 +61,7 @@ export const SEED_DOCTORS: Doctor[] = [
     rating: 4.9,
     reviewsCount: 112,
     badge: 'Mutaxassis',
-    imageUrl: './public/Malika.png', // doctorImg(2),
+    imageUrl:  doctorImg(2), // doctorImg(2),
     bio: "Ko‘z salomatligi bo‘yicha tashxis va davolash: ko‘rish tekshiruvi, quruq ko‘z sindromi, refraksion muammolar. Bemor bilan yumshoq va tushunarli muloqot.",
     certificates: [{ title: 'ICO Assessment', subtitle: 'International Council of Ophthalmology, 2019' }],
     education: [{ title: 'Toshkent Tibbiyot Instituti', subtitle: '2010–2016' }],
@@ -82,7 +84,7 @@ export const SEED_DOCTORS: Doctor[] = [
     rating: 4.8,
     reviewsCount: 190,
     badge: 'Tajriba talaba',
-    imageUrl: './public/umarov.png', // doctorImg(3),
+    imageUrl: doctorImg(3), // doctorImg(3),
     bio: "Nevrologik kasalliklar bo‘yicha chuqur tajriba: migren, nevralgiya, uyqu buzilishi. Dalillarga asoslangan yondashuv va individual reja.",
     certificates: [{ title: 'Neuro Board', subtitle: '2020' }],
     education: [{ title: 'TTA', subtitle: '2003–2009' }],
@@ -105,7 +107,7 @@ export const SEED_DOCTORS: Doctor[] = [
     rating: 4.9,
     reviewsCount: 98,
     badge: 'Oliy toifa',
-    imageUrl: './public/nigora.png', // doctorImg(4),
+    imageUrl: doctorImg(4), // doctorImg(4),
     bio: "Bolalar salomatligi bo‘yicha konsultatsiya, immunitet, profilaktika va o‘sish-rivojlanish nazorati. Ota-onalar bilan tushunarli tavsiyalar.",
     certificates: [{ title: 'Pediatrics CPD', subtitle: '2022' }],
     education: [{ title: 'Samarqand TMI', subtitle: '2011–2017' }],
