@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f5f8ff;
+  --surface: #ffffff;
+  --text: #3a4a59;
+  --text-strong: #0c2f4a;
+  --muted: #6b7d8f;
+  --border: rgba(15, 76, 129, 0.12);
+  --shadow-soft: 0 10px 30px rgba(12, 47, 74, 0.08);
+  --shadow-card: 0 8px 24px rgba(12, 47, 74, 0.08);
+
+  --primary: #0b5a92;
+  --primary-strong: #084a78;
+  --primary-soft: rgba(11, 90, 146, 0.12);
+
+  --success: #0b8f6a;
+  --warning: #f2b200;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial,
+    "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Subtle grid texture similar to screenshots */
+.bg-soft-grid {
+  background-image: radial-gradient(
+    rgba(11, 90, 146, 0.08) 0.7px,
+    transparent 0.7px
+  );
+  background-size: 18px 18px;
+}
+
+.container-page {
+  width: min(1160px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+}
+
+.card-soft {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(6px);
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-strong) 100%);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  box-shadow: 0 10px 22px rgba(11, 90, 146, 0.2);
+  transition: transform 200ms ease, box-shadow 200ms ease, filter 200ms ease;
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(11, 90, 146, 0.24);
+  filter: saturate(1.02);
+}
+.btn-primary:active {
+  transform: translateY(0px);
+}
+
+.btn-ghost {
+  background: rgba(11, 90, 146, 0.06);
+  color: var(--primary-strong);
+  border: 1px solid rgba(11, 90, 146, 0.16);
+  border-radius: 999px;
+  transition: background 200ms ease, transform 200ms ease;
+}
+.btn-ghost:hover {
+  background: rgba(11, 90, 146, 0.10);
+  transform: translateY(-1px);
+}
+
+.link-nav {
+  color: var(--muted);
+  transition: color 200ms ease;
+}
+.link-nav:hover {
+  color: var(--primary-strong);
+}
+
+.focus-ring:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(11, 90, 146, 0.18);
+}
